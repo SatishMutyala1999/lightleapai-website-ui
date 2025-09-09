@@ -10,13 +10,16 @@
 
       <div class="scroll-indicator">
         <div class="my-4 get-started-btn d-none">
-          <a
-            href=""
+          <button
+            type="button"
             @click.prevent="showModal = true"
-            class="btn btn-light px-5"
-            >Get Started</a
+            class="btn btn-light px-4 py-2"
           >
+            <i class="bi bi-rocket me-1 h5"></i>
+            Get Started
+          </button>
         </div>
+
         <div>
           <span>Scroll to Explore</span>
           <i class="bi bi-chevron-down"></i>
@@ -62,7 +65,7 @@ const showModal = ref(false);
   cursor: pointer;
 }
 
-.scroll-indicator .bi {
+.scroll-indicator .bi-chevron-down {
   display: block;
   font-size: 2rem;
   animation: bounce 1.5s infinite;

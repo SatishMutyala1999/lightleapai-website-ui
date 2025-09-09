@@ -18,12 +18,14 @@
         </a>
 
         <div class="ms-auto flex-shrink-0 get-started-btn">
-          <a
-            href=""
+          <button
+            type="button"
             @click.prevent="showModal = true"
-            class="btn btn-light px-3 px-sm-4 px-md-5 d-none d-md-block"
-            >Get Started</a
+            class="btn btn-dark px-4 d-none d-md-block"
           >
+            <i class="bi bi-rocket me-1 h5"></i>
+            Get Started
+          </button>
         </div>
       </div>
     </nav>
@@ -63,6 +65,10 @@ const showModal = ref(false);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   z-index: 1050;
+}
+
+.get-started-btn .bi-rocket::before {
+  transform: rotate(45deg);
 }
 
 @media (max-width: 576px) {
