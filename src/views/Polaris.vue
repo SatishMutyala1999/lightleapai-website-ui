@@ -1,8 +1,11 @@
 <template>
   <div>
-    <router-view></router-view>
+    <h1>Polaris</h1>
   </div>
 </template>
 
 <script setup>
 </script>
+
+<style>
+</style>
