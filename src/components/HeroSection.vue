@@ -32,7 +32,7 @@
 
 <script setup>
 import { ref } from "vue";
-import universityMP4 from "@/assets/videos/university.mp4";
+import universityMP4 from "@/assets/videos/hero_video_2.mp4";
 import RequestDemoModal from "@/components/RequestDemoModel.vue";
 const showModal = ref(false);
 </script>

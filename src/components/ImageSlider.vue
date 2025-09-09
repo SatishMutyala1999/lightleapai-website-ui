@@ -64,11 +64,11 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import ConversationalOs from "@/assets/images/ConversationalOS.png";
-import DataMigration from "@/assets/images/Data Migration.JPG";
+import ConversationalOs from "@/assets/images/Aether_latest.png";
+import DataMigration from "@/assets/images/Data_Migration.JPG";
 import DocumentIntelligence from "@/assets/images/DocumentIntelligence.png";
-import FraudIntelligence from "@/assets/images/FraudIntelligence.JPG";
-import studentservices1 from "@/assets/images/studentservices1.JPG";
+import FraudIntelligence from "@/assets/images/fraud_intelligence.JPG";
+import studentservices1 from "@/assets/images/student_services_1.JPG";
 
 const slides = [
   {
@@ -103,7 +103,7 @@ const totalItems = slides.length;
 const progress = ref(Array(totalItems).fill(0));
 
 const intervalDuration = 50;
-const slideDuration = 6000;
+const slideDuration = 8000;
 let progressTimer = null;
 
 function startProgress(index) {
@@ -150,11 +150,11 @@ onBeforeUnmount(() => {
   top: 1rem;
   left: 1rem;
   color: white;
-  background: hsla(0, 0%, 0%, 0.3);
-  backdrop-filter: blur(10px);
+  background: hsla(0, 0%, 79%, 0.3);
+  backdrop-filter: blur(5px);
   padding: 2.5rem 2rem;
   border-radius: 8px;
-  max-width: 80%;
+  width: 35%;
   text-align: center;
 }
 
@@ -202,7 +202,7 @@ onBeforeUnmount(() => {
   bottom: 0;
   left: 0;
   height: 100%;
-  background-color: #212529;
+  background-color: gray;
   transition: width 0.05s linear;
   color: white;
 }
@@ -213,6 +213,7 @@ onBeforeUnmount(() => {
   }
   .carousel-overlay {
     padding: 1rem 0.5rem;
+    width: 55%;
   }
   .carousel-overlay h3,
   .carousel-overlay p {

@@ -4,7 +4,7 @@
       <div
         class="container d-flex justify-content-between align-items-center flex-nowrap"
       >
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <router-link class="navbar-brand d-flex align-items-center" to="/">
           <img
             :src="lightleap_logo"
             alt="lightleap_logo"
@@ -15,7 +15,7 @@
             alt="lightleap_logowebp"
             class="design_lightleap_logo_webp"
           />
-        </a>
+        </router-link>
 
         <div class="ms-auto flex-shrink-0 get-started-btn">
           <button

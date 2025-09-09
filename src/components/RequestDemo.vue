@@ -26,9 +26,7 @@
                   href="#"
                   class="text-decoration-none d-flex justify-content-between align-items-center col-12"
                   ><h2 class="fw-bold mb-0 text-white">Contact Us</h2>
-                  <span class="fs-4 text-white"
-                    ><i class="bi bi-arrow-right"></i></span
-                ></a>
+                 </a>
                 <div class="mt-4">
                   <p class="mb-0">
                     <a
@@ -38,7 +36,7 @@
                       (888)-651-3309</a
                     >
                   </p>
-                  <p class="mb-0">33063 Peachtree Industrial Blvd #201</p>
+                  <p class="mb-0">3063 Peachtree Industrial Blvd #201</p>
                   <p class="mb-0">Duluth, GA 30097</p>
                 </div>
               </div>

@@ -4,7 +4,7 @@
       <div class="container">
         <h2 class="text-center display-4 fw-bold mb-5">Our Platforms</h2>
 
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center my-5">
           <div
             class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start position-relative"
           >
@@ -40,9 +40,9 @@
               Detect fraud, across admissions and aid, without blocking real
               students
             </p>
-            <a href="#" class="btn btn-dark"
+            <router-link to="/orion" class="btn btn-dark"
               >Learn More <i class="bi bi-arrow-right ms-2"></i>
-            </a>
+            </router-link>
           </div>
         </div>
 
@@ -79,9 +79,9 @@
             <p>
               AI simplifies reviews, with fewer manual steps and faster outcomes
             </p>
-            <a href="#" class="btn btn-dark"
+            <router-link to="/prism" class="btn btn-dark"
               >Learn More <i class="bi bi-arrow-right ms-2"></i
-            ></a>
+            ></router-link>
           </div>
         </div>
 
@@ -116,9 +116,9 @@
           </div>
           <div class="col-lg-4 col-md-12 text-center text-lg-start">
             <p>Triage requests, Prioritize needs, keep students progressing</p>
-            <a href="#" class="btn btn-dark"
+            <router-link to="/polaris" class="btn btn-dark"
               >Learn More <i class="bi bi-arrow-right ms-2"></i
-            ></a>
+            ></router-link>
           </div>
         </div>
 
@@ -155,9 +155,9 @@
             <p>
               Streamline transfers, catch anomalies early and keep data reliable
             </p>
-            <a href="#" class="btn btn-dark"
+            <router-link to="/atlas" class="btn btn-dark"
               >Learn More <i class="bi bi-arrow-right ms-2"></i
-            ></a>
+            ></router-link>
           </div>
         </div>
       </div>
@@ -166,9 +166,9 @@
 </template>
 
 <script setup>
-import atlasMP4 from "@/assets/videos/atlas.mp4";
-import polrisMP4 from "@/assets/videos/polaris.mp4";
-import prismMP4 from "@/assets/videos/prism.mp4";
+import atlasMP4 from "@/assets/videos/datamigration.mp4";
+import polrisMP4 from "@/assets/videos/student_services.mp4";
+import prismMP4 from "@/assets/videos/prism_latest.mp4";
 import fraudlatest from "@/assets/videos/fraud_latest.mp4";
 </script>
 

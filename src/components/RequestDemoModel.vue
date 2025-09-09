@@ -63,6 +63,9 @@
               ></textarea>
             </div>
           </div>
+          <div class="mb-3 d-flex justify-content-center">
+            <div class="g-recaptcha" data-sitekey="6LfPosMrAAAAAI-Y6z0kbmeLHGnfnyyEOMo3aXfG"></div>
+          </div>
 
           <div class="modal-footer">
             <button
@@ -88,7 +91,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch,onMounted } from "vue";
 
 const props = defineProps(["modelValue"]);
 const emit = defineEmits(["update:modelValue"]);
@@ -100,7 +103,15 @@ const closeModal = () => {
 };
 
 const handleSubmit = () => {
-  alert("Form submitted!");
+  const response = window.grecaptcha.getResponse();
+  
+  if(!response){
+    alert("Please complete the captcha!");
+    return;
+  }
+  // Normally send `response` to backend for verification
+  alert("Form submitted with captcha!");
+  window.grecaptcha.reset(); // reset captcha after submit
   closeModal();
 };
 
@@ -114,6 +125,12 @@ watch(
     }
   }
 );
+
+onMounted(()=>{
+    if (window.grecaptcha) {
+    window.grecaptcha.reset();
+  }
+});
 </script>
 
 <style>

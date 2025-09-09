@@ -1,0 +1,84 @@
+.hero-title {
+    font-size: 7rem;
+    font-weight: bold;
+
+}
+
+.hero-text {
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 2;
+}
+
+.logo-img {
+    max-height: 40px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.btn-get-started {
+    font-size: 1rem;
+    padding: 6px 16px;
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        max-height: 30px;
+    }
+
+    .btn-get-started {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+.orion-heading {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.orion-content_1 {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media(min-width:579px) {
+    .orion_content .orion-sub-content {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media(min-width:579px) {
+    .orion-heading {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .orion-content_1 {
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
