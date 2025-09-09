@@ -29,7 +29,7 @@
               </div>
               <a class="lt_see_all"> See All </a>
             </div>
-            <div id="lt_images_wrapper">
+            <div id="lt_images_wrapper" ref="wrapper">
               <div class="lt_space_for_images" data-index="0">
                 <p class="lt_item_mobile_reference">Conversational OS</p>
                 <a class="lt_design_features mt-4" href="" id="">
@@ -175,7 +175,22 @@ import DataMigration from "@/assets/images/Data Migration.JPG";
 import DocumentIntelligence from "@/assets/images/DocumentIntelligence.png";
 import FraudIntelligence from "@/assets/images/FraudIntelligence.JPG";
 import studentservices1 from "@/assets/images/studentservices1.JPG";
-</script>
+import {onMounted,ref} from "vue";
+import {initCarousel} from "@/utils/carousel.js";
 
+const wrapper = ref(null);
+
+
+onMounted(() =>{
+
+  initCarousel(wrapper.value,null,{
+    interval:4000,
+    tickRate: 100,
+    autoplay:true,
+    showProgress:true,
+  });
+});
+
+</script>
 <style>
 </style>

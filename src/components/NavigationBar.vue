@@ -26,11 +26,11 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ms-auto d-flex align-items-center">
-            <a href="#" class="btn btn-outline-light me-3 get-started-btn"
+            <a class="btn btn-outline-light me-3 get-started-btn" @click.prevent="showModal = true"
               >Get Started</a
             >
 
-            <button
+            <!-- <button
               class="btn btn-link text-light me-1 nav-icon-btn"
               type="button"
             >
@@ -39,17 +39,25 @@
 
             <button class="btn btn-link text-light nav-icon-btn" type="button">
               <i class="bi bi-list"></i>
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
     </nav>
+    <RequestDemoModal v-model="showModal" />
   </div>
 </template>
 
 <script setup>
 import lightleap_logo from "@/assets/images/lightleap_logo.png";
 import lightleap_logowebp from "@/assets/images/lightleap_logowebp.webp";
+
+import { ref } from 'vue'
+import RequestDemoModal from "@/components/RequestDemoModel.vue"
+
+const showModal = ref(false);
+
+
 </script>
 
 <style scoped>
