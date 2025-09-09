@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar col-8 m-auto">
-      <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+  <div class="navbar-backdrop">
+    <nav class="navbar navbar-expand-lg">
+      <div
+        class="container d-flex justify-content-between align-items-center flex-nowrap"
+      >
+        <a class="navbar-brand d-flex align-items-center" href="#">
           <img
             :src="lightleap_logo"
             alt="lightleap_logo"
@@ -15,50 +17,61 @@
           />
         </a>
 
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="navbar-nav ms-auto d-flex align-items-center">
-            <a class="btn btn-outline-light me-3 get-started-btn" @click.prevent="showModal = true"
-              >Get Started</a
-            >
-
-            <!-- <button
-              class="btn btn-link text-light me-1 nav-icon-btn"
-              type="button"
-            >
-              <i class="bi bi-search"></i>
-            </button>
-
-            <button class="btn btn-link text-light nav-icon-btn" type="button">
-              <i class="bi bi-list"></i>
-            </button> -->
-          </div>
+        <div class="ms-auto flex-shrink-0 get-started-btn">
+          <a
+            href=""
+            @click.prevent="showModal = true"
+            class="btn btn-light px-3 px-sm-4 px-md-5 d-none d-md-block"
+            >Get Started</a
+          >
         </div>
       </div>
     </nav>
-    <RequestDemoModal v-model="showModal" />
   </div>
+  <RequestDemoModal v-model="showModal" />
 </template>
 
 <script setup>
 import lightleap_logo from "@/assets/images/lightleap_logo.png";
 import lightleap_logowebp from "@/assets/images/lightleap_logowebp.webp";
 
-import { ref } from 'vue'
-import RequestDemoModal from "@/components/RequestDemoModel.vue"
+import { ref } from "vue";
+import RequestDemoModal from "@/components/RequestDemoModel.vue";
 
 const showModal = ref(false);
-
-
 </script>
 
 <style scoped>
+.design_lightleap_logo {
+  height: 2rem;
+  width: auto;
+}
+
+.design_lightleap_logo_webp {
+  max-width: 12rem;
+  height: auto;
+}
+
+.navbar-backdrop {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  background-color: #ffffffba;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .get-started-btn {
+    display: none;
+  }
+}
 </style>

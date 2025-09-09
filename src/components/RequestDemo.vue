@@ -1,58 +1,52 @@
 <template>
   <div>
-    <div
-      class="d-flex align-items-center justify-content-start bg-light container custom-container my-5"
-    >
-      <div class="row g-4 w-100">
-        <!--Request Demo-->
-        <div class="col-md-6 mt-2">
-          <div
-            class="cta-card cta-card-light p-3 rounded-4"
-            @click="showModal = true"
-          >
-            <div
-              class="position-relative z-2 d-flex justify-content-between align-items-start"
-            >
-              <h2 class="display-6 fw-bold text-dark mb-0">Get Started</h2>
-              <div class="cta-arrow">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-5 card-default-height">
+            <div href="" @click="showModal = true" class="h-100 pointer-cursor">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-secondary-subtle d-flex justify-content-between align-items-start flex-row"
+              >
+                <h2 class="fw-bold mb-0 text-dark">Get Started</h2>
+                <span class="fs-4 text-dark"
+                  ><i class="bi bi-arrow-right"></i
+                ></span>
               </div>
             </div>
           </div>
-        </div>
-        <!--Contact Us-->
-        <div class="col-md-6 mt-2">
-          <div class="cta-card cta-card-dark p-3 rounded-4">
-            <div
-              class="position-relative z-2 d-flex justify-content-between align-items-start"
-            >
-              <h2 class="display-6 fw-bold text-white mb-0">Contact Us</h2>
-              <p class="mb-4">
+
+          <div class="col-md-6 col-lg-5 card-default-height">
+            <a href="#" class="text-decoration-none">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-white p-4 bg-dark d-flex justify-content-between align-items-start flex-column"
+                style=""
+              >
                 <a
-                  href="tel:8886513309"
-                  class="text-decoration-underline text-light"
-                  >(888)-651-3309</a
-                >
-              </p>
-              <p class="mb-0">33063 Peachtree Industrial Blvd #201</p>
-              <p class="mb-0">Duluth, GA 30097</p>
-            </div>
+                  href="#"
+                  class="text-decoration-none d-flex justify-content-between align-items-center col-12"
+                  ><h2 class="fw-bold mb-0 text-white">Contact Us</h2>
+                  <span class="fs-4 text-white"
+                    ><i class="bi bi-arrow-right"></i></span
+                ></a>
+                <div class="mt-4">
+                  <p class="mb-0">
+                    <a
+                      href="tel:8886513309"
+                      class="text-decoration-underline text-light"
+                    >
+                      (888)-651-3309</a
+                    >
+                  </p>
+                  <p class="mb-0">33063 Peachtree Industrial Blvd #201</p>
+                  <p class="mb-0">Duluth, GA 30097</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <RequestDemoModal v-model="showModal" />
   </div>
 </template>
@@ -64,5 +58,11 @@ import RequestDemoModal from "@/components/RequestDemoModel.vue";
 const showModal = ref(false);
 </script>
 
-<style>
+<style scoped>
+.card-default-height {
+  min-height: 10rem;
+}
+.pointer-cursor {
+  cursor: pointer;
+}
 </style>

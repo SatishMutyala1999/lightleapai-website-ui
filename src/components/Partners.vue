@@ -1,45 +1,24 @@
 <template>
-  <div class="container custom-container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="display-4 fw-normal text-dark mb-5">Our Trusted Partners</h1>
-      </div>
-    </div>
-    <div class="marquee-container">
-      <div class="marquee-content d-flex align-items-center">
-        <!-- First set of logos -->
-        <div class="logo-item mx-4">
-          <img :src="foothill_latest" alt="foothill" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="ivtech" alt="ivtech" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="sanbernadio" alt="sanbernadio" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="rancho" alt="rancho" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="SWC" alt="SWC" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="statecenter" alt="statecenter" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="chabot" alt="chabot" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="CVC" alt="CVC" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="NAPA" alt="NAPA" class="logo-img" />
-        </div>
-        <div class="logo-item mx-4">
-          <img :src="westvalley" alt="westvalley" class="logo-img" />
+  <div>
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center display-4 fw-bold mb-4">Our Partners</h2>
+        <div class="overflow-hidden py-2">
+          <div class="d-flex align-items-center gap-5 marquee">
+            <img :src="foothill_latest" alt="Partner 1" class="partner-logo" />
+            <img :src="ivtech" alt="Partner 2" class="partner-logo" />
+            <img :src="sanbernadio" alt="Partner 3" class="partner-logo" />
+            <img :src="rancho" alt="Partner 4" class="partner-logo" />
+            <img :src="SWC" alt="Partner 5" class="partner-logo" />
+            <img :src="chabot" alt="Partner 6" class="partner-logo" />
+            <img :src="statecenter" alt="Partner 1" class="partner-logo" />
+            <img :src="CVC" alt="Partner 2" class="partner-logo" />
+            <img :src="NAPA" alt="Partner 3" class="partner-logo" />
+            <img :src="westvalley" alt="Partner 4" class="partner-logo" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -56,5 +35,23 @@ import NAPA from "@/assets/images/NAPA.jpg";
 import westvalley from "@/assets/images/westvalley.png";
 </script>
 
-<style>
+<style scoped>
+.partner-logo {
+  height: 8rem;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.marquee {
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 </style>

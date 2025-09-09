@@ -1,118 +1,190 @@
 <template>
-  <div class="py-5">
-    <div class="col-10 mx-auto">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="display-4 fw-normal text-dark mb-5">Our Platforms</h1>
-        </div>
-      </div>
+  <div>
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center display-4 fw-bold mb-5">Our Platforms</h2>
 
-      <!-- Loop through platforms -->
-      <div
-        v-for="(platform) in platforms"
-        :key="platform.name"
-        class="d-flex mb-5 pb-5 align-items-center justify-content-around gap-4 main-platform"
-      >
-        <!-- Column 1: Platform name -->
-        <div class="col-sm-12 col-md-4 col-12 d-flex gap-4 left-platform-div-text">
-          <div class="version-number">{{ platform.version }}</div>
-          <div class="d-flex flex-column">
-            <div class="platform-name mb-4 text-center">
-              {{ platform.name }}
-            </div>
-            <div class="subtitle-text text-center">
-              {{ platform.subtitle }}
+        <div class="row align-items-center mb-5">
+          <div
+            class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start position-relative"
+          >
+            <span class="fw-bold text-secondary d-block d-lg-none">0.1</span>
+
+            <span
+              class="position-absolute top-0 start-0 translate-middle-y fw-bold h4 text-secondary d-none d-lg-block"
+            >
+              0.1
+            </span>
+
+            <h3 class="fw-bold ms-lg-5 display-1">Orion</h3>
+            <p class="text-muted ms-lg-5">Fraud Intelligence</p>
+          </div>
+
+          <div class="col-lg-5 col-md-12 mb-3 mb-lg-0 px-5 video-container">
+            <div class="ratio ratio-16x9">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-100 h-100 object-fit-cover"
+              >
+                <source :src="fraudlatest" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
-        </div>
 
-        <!-- Column 2: Video -->
-        <div class="col-sm-12 col-md-4 col-12 d-flex justify-content-center">
-          <div class="platform-video ">
-            <video
-              autoplay
-              muted
-              loop
-              class="video-clip"
-              style="max-width: 100%; border-radius: 10px;"
-            >
-              <source :src="platform.video" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-
-        <!-- Column 3: Description -->
-        <div class="col-sm-12 col-md-4 col-12 ms-5">
-          <div class="platform-description">
-            <p
-              v-for="(line, i) in platform.description"
-              :key="i"
-              class="lead text-dark"
-              :class="{ 'mb-0': i < platform.description.length - 1 }"
-            >
-              {{ line }}
+          <div class="col-lg-4 col-md-12 text-center text-lg-start">
+            <p>
+              Detect fraud, across admissions and aid, without blocking real
+              students
             </p>
+            <a href="#" class="btn btn-dark"
+              >Learn More <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+          <div
+            class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start position-relative"
+          >
+            <span class="fw-bold text-secondary d-block d-lg-none">0.2</span>
+
+            <span
+              class="position-absolute top-0 start-0 translate-middle-y fw-bold h4 text-secondary d-none d-lg-block"
+            >
+              0.2
+            </span>
+
+            <h3 class="fw-bold ms-lg-5 display-1">Prism</h3>
+            <p class="text-muted ms-lg-5">Document Intelligence</p>
+          </div>
+          <div class="col-lg-5 col-md-12 mb-3 mb-lg-0 px-5 video-container">
+            <div class="ratio ratio-16x9">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-100 h-100 object-fit-cover"
+              >
+                <source :src="prismMP4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 text-center text-lg-start">
+            <p>
+              AI simplifies reviews, with fewer manual steps and faster outcomes
+            </p>
+            <a href="#" class="btn btn-dark"
+              >Learn More <i class="bi bi-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+          <div
+            class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start position-relative"
+          >
+            <span class="fw-bold text-secondary d-block d-lg-none">0.3</span>
+
+            <span
+              class="position-absolute top-0 start-0 translate-middle-y fw-bold h4 text-secondary d-none d-lg-block"
+            >
+              0.3
+            </span>
+
+            <h3 class="fw-bold ms-lg-5 display-1">Polaris</h3>
+            <p class="text-muted ms-lg-5">Students Service Accelerator</p>
+          </div>
+          <div class="col-lg-5 col-md-12 mb-3 mb-lg-0 px-5 video-container">
+            <div class="ratio ratio-16x9">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-100 h-100 object-fit-cover"
+              >
+                <source :src="polrisMP4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 text-center text-lg-start">
+            <p>Triage requests, Prioritize needs, keep students progressing</p>
+            <a href="#" class="btn btn-dark"
+              >Learn More <i class="bi bi-arrow-right ms-2"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div
+            class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start position-relative"
+          >
+            <span class="fw-bold text-secondary d-block d-lg-none">0.4</span>
+
+            <span
+              class="position-absolute top-0 start-0 translate-middle-y fw-bold h4 text-secondary d-none d-lg-block"
+            >
+              0.4
+            </span>
+
+            <h3 class="fw-bold ms-lg-5 display-1">Atlas</h3>
+            <p class="text-muted ms-lg-5">Data Foundation</p>
+          </div>
+          <div class="col-lg-5 col-md-12 mb-3 mb-lg-0 px-5 video-container">
+            <div class="ratio ratio-16x9">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-100 h-100 object-fit-cover"
+              >
+                <source :src="atlasMP4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 text-center text-lg-start">
+            <p>
+              Streamline transfers, catch anomalies early and keep data reliable
+            </p>
+            <a href="#" class="btn btn-dark"
+              >Learn More <i class="bi bi-arrow-right ms-2"></i
+            ></a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script setup>
 import atlasMP4 from "@/assets/videos/atlas.mp4";
-// import fraudMP4 from "@/assets/videos/fraud.mp4";
 import polrisMP4 from "@/assets/videos/polaris.mp4";
 import prismMP4 from "@/assets/videos/prism.mp4";
 import fraudlatest from "@/assets/videos/fraud_latest.mp4";
-const platforms = [
-  {
-    version: "0.1",
-    name: "Orion",
-    subtitle: "Fraud Intelligence",
-    video: fraudlatest,
-    description: [
-      "Detect fraud,",
-      "across admissions and aid",
-      "without blocking real students",
-    ],
-  },
-  {
-    version: "0.2",
-    name: "Prism",
-    subtitle: "Document Intelligence",
-    video: prismMP4,
-    description: [
-      "AI simplifies reviews,",
-      "with fewer manual steps",
-      "and faster outcomes",
-    ],
-  },
-  {
-    version: "0.3",
-    name: "Polaris",
-    subtitle: "Students Service Accelerator",
-    video: polrisMP4,
-    description: [
-      "Triage requests,",
-      "Prioritize needs,",
-      "keep students progressing",
-    ],
-  },
-  {
-    version: "0.4",
-    name: "Atlas",
-    subtitle: "Data Foundation",
-    video: atlasMP4,
-    description: [
-      "Streamline transfers,",
-      "catch anomalies early",
-      "and keep data reliable",
-    ],
-  },
-];
 </script>
 
-<style>
+<style scoped>
+.video-container video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover video {
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .video-container video {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
 </style>

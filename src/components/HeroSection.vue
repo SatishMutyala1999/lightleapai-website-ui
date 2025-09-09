@@ -1,32 +1,92 @@
 <template>
   <div>
-    <div class="video-container">
-      <video autoplay muted loop playsinline class="hero-video">
+    <section
+      class="hero-section d-flex align-items-center justify-content-center"
+    >
+      <video class="hero-video" autoplay muted loop playsinline>
         <source :src="universityMP4" type="video/mp4" />
-        <!-- <track
-          src="captions.vtt"
-          kind="captions"
-          srclang="en"
-          label="English"
-        /> -->
         Your browser does not support the video tag.
       </video>
-      <!-- Centered Text Overlay -->
-      <div class="video-overlay">
-        <span class="overlay-text">Empowering Education with AI</span>
-      </div>
-      <!-- Scroll Indicator -->
+
       <div class="scroll-indicator">
-        <span class="arrow">↓</span>
-        Scroll to Explore
+        <div class="my-4 get-started-btn d-none">
+          <a
+            href=""
+            @click.prevent="showModal = true"
+            class="btn btn-light px-5"
+            >Get Started</a
+          >
+        </div>
+        <div>
+          <span>Scroll to Explore</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
+  <RequestDemoModal v-model="showModal" />
 </template>
 
 <script setup>
+import { ref } from "vue";
 import universityMP4 from "@/assets/videos/university.mp4";
+import RequestDemoModal from "@/components/RequestDemoModel.vue";
+const showModal = ref(false);
 </script>
 
-<style>
+<style scoped>
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.scroll-indicator .bi {
+  display: block;
+  font-size: 2rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 576px) {
+  .get-started-btn {
+    display: block !important;
+  }
+}
 </style>
